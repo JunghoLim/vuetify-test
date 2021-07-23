@@ -2,7 +2,11 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <v-card class="mx-auto" color="grey lighten-4" max-width="600">
+        <v-card
+          class="mx-auto"
+          color="grey lighten-4"
+          max-width="600"
+        >
           <v-card-title>
             <v-icon
               :color="checking ? 'red lighten-2' : 'indigo'"
@@ -20,14 +24,18 @@
                 <span
                   class="text-h3 font-weight-black"
                   v-text="avg || '—'"
-                ></span>
+                />
                 <strong v-if="avg">BPM</strong>
               </div>
             </v-row>
 
-            <v-spacer></v-spacer>
+            <v-spacer />
 
-            <v-btn icon class="align-self-start" size="28">
+            <v-btn
+              icon
+              class="align-self-start"
+              size="28"
+            >
               <v-icon>mdi-arrow-right-thick</v-icon>
             </v-btn>
           </v-card-title>
@@ -41,12 +49,24 @@
               :value="heartbeats"
               auto-draw
               stroke-linecap="round"
-            ></v-sparkline>
+            />
           </v-sheet>
         </v-card>
       </v-col>
-      <v-col v-for="count in 4" :key="count" cols="12" sm="6" md="4" lg="3">
-        <v-card class="mx-auto text-center" color="green" dark max-width="600">
+      <v-col
+        v-for="count in 4"
+        :key="count"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+      >
+        <v-card
+          class="mx-auto text-center"
+          color="green"
+          dark
+          max-width="600"
+        >
           <v-card-text>
             <v-sheet color="rgba(0, 0, 0, .12)">
               <v-sparkline
@@ -57,19 +77,28 @@
                 stroke-linecap="round"
                 smooth
               >
-                <template v-slot:label="item"> ${{ item.value }} </template>
+                <template v-slot:label="item">
+                  ${{ item.value }}
+                </template>
               </v-sparkline>
             </v-sheet>
           </v-card-text>
 
           <v-card-text>
-            <div class="text-h4 font-weight-thin">Sales Last 24h</div>
+            <div class="text-h4 font-weight-thin">
+              Sales Last 24h
+            </div>
           </v-card-text>
 
-          <v-divider></v-divider>
+          <v-divider />
 
           <v-card-actions class="justify-center">
-            <v-btn block text>Go to Report</v-btn>
+            <v-btn
+              block
+              text
+            >
+              Go to Report
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>

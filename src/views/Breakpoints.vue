@@ -5,7 +5,13 @@
         $vuetify.breakpoints.name: {{ $vuetify.breakpoint.name }}
       </v-card-title>
       <v-container>
-        <v-card class="pa-3" outlined :height="height"> content </v-card>
+        <v-card
+          class="pa-3"
+          outlined
+          :height="height"
+        >
+          content
+        </v-card>
       </v-container>
     </v-card>
     <v-card class="mt-5">
@@ -13,7 +19,13 @@
         $vuetify.breakpoints.name: {{ $vuetify.breakpoint.name }}
       </v-card-title>
       <v-container>
-        <v-card class="pa-3" outlined :height="height"> content </v-card>
+        <v-card
+          class="pa-3"
+          outlined
+          :height="height"
+        >
+          content
+        </v-card>
       </v-container>
     </v-card>
   </v-container>
