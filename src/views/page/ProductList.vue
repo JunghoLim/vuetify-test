@@ -1,7 +1,17 @@
 <template>
-  <v-container fluid app>
+  <v-container
+    fluid
+    app
+  >
     <v-row>
-      <v-col v-for="item in 20" :key="item" cols="12" sm="5" md="4" lg="3">
+      <v-col
+        v-for="item in 20"
+        :key="item"
+        cols="12"
+        sm="5"
+        md="4"
+        lg="3"
+      >
         <product-item />
       </v-col>
     </v-row>
