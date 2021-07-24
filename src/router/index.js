@@ -18,7 +18,8 @@ Vue.use(VueRouter)
 const routes = [{
         path: '/',
         component: DefaultLayout,
-        children: [{
+        children: [
+            {
                 path: '/',
                 name: 'DashBoard',
                 component: Dashboard
@@ -66,12 +67,12 @@ const routes = [{
         children: [{
                 path: 'sign-in',
                 name: 'SignIn',
-                component: SignIn
+                component: () => import(/* webpackChunkName: "views-athentication" */'@/views/authentication/SignIn')
             },
             {
                 path: 'sign-up',
                 name: 'SignUp',
-                component: SignUp
+                component: () => import(/* webpackChunkName: "views-athentication" */'@/views/authentication/SignUp')
             }
         ]
     },
